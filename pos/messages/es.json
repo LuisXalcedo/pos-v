@@ -52,5 +52,9 @@
     "bloqued": "Bloqueado",
     "created-at": "Creado en",
     "updated-at": "Actualizado en"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "description": "Bienvenido al Dashboard"
   }
 }

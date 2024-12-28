@@ -26,6 +26,11 @@
     "salesperson": "Salesperson",
     "logout": "Logout"
   },
+  "AppSidebar": {
+    "home": "Home",
+    "salesperson": "Salesperson",
+    "logout": "Logout"
+  },
   "LocaleSwitcher": {
     "label": "Change Language",
     "locale": "{locale, select, en {🇺🇸 English} es {🇪🇸 Spanish} other {Unknown}}"
@@ -52,5 +57,9 @@
     "bloqued": "Bloqued",
     "created-at": "Created At",
     "updated-at": "Updated At"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "description": "Welcome to the Dashboard"
   }
 }

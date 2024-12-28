@@ -3,19 +3,13 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { cookies } from "next/headers";
+
+import { exo } from "@/components/ui/fonts";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 export const metadata: Metadata = {
   title: "Green Retail",
@@ -25,11 +19,15 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale },
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-  params: { locale: string };
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const cookiesStore = await cookies();
+  const defaultOpen = cookiesStore.get("sidebar:state")?.value === "true";
+  const { locale } = await params;
+
   //Ensure that the incoming locale is valid
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (!routing.locales.includes(locale as any)) {
@@ -42,11 +40,15 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${exo.className} antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <SidebarProvider defaultOpen={defaultOpen}>
+            <AppSidebar />
+            <main>
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarProvider>
         </NextIntlClientProvider>
       </body>
     </html>
