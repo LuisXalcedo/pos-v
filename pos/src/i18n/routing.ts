@@ -1,5 +1,5 @@
-import { defineRouting } from "next-intl/routing";
 import { createNavigation } from "next-intl/navigation";
+import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
   // A list of all locales that are supported
@@ -39,8 +39,15 @@ export const routing = defineRouting({
       en: "/logout",
       es: "/cerrar-sesion",
     },
+    "/settings": {
+      en: "/settings",
+      es: "/configuracion",
+    },
   },
 });
+
+export type Pathnames = keyof typeof routing.pathnames;
+export type Locale = (typeof routing.locales)[number];
 
 // Lightweight wrappers around Next.js' navigation APIs
 // that will consider the routing configuration

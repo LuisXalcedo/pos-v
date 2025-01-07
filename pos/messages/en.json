@@ -3,7 +3,7 @@
     "title": "Home",
     "description": "Welcome to Green Retail"
   },
-  "NotFoundPage": {
+  "NotFound": {
     "title": "Page Not Found",
     "description": "The page you are looking for does not exist.",
     "backHome": "Back to Home"
@@ -24,12 +24,8 @@
   "NavLinks": {
     "home": "Home",
     "salesperson": "Salesperson",
-    "logout": "Logout"
-  },
-  "AppSidebar": {
-    "home": "Home",
-    "salesperson": "Salesperson",
-    "logout": "Logout"
+    "logout": "Logout",
+    "settings": "Settings"
   },
   "LocaleSwitcher": {
     "label": "Change Language",
@@ -61,5 +57,13 @@
   "Dashboard": {
     "title": "Dashboard",
     "description": "Welcome to the Dashboard"
+  },
+  "Settings": {
+    "title": "Settings",
+    "description": "Welcome to the Settings",
+    "language": {
+      "title": "Language",
+      "description": "Choose your preferred language"
+    }
   }
 }

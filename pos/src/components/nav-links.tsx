@@ -18,8 +18,8 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export function AppSidebar() {
-  const t = useTranslations("AppSidebar");
+export function NavLinks() {
+  const t = useTranslations("NavLinks");
 
   return (
     <Sidebar>
@@ -59,11 +59,9 @@ export function AppSidebar() {
             </SidebarMenuItem>
 
             <SidebarMenuItem key={"settings"}>
-              <SidebarMenuButton asChild>
-                <a href="/settings">
-                  <Settings />
-                  <span>Settings</span>
-                </a>
+              <SidebarMenuButton>
+                <Settings />
+                <Link href="/settings">{t("settings")}</Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>

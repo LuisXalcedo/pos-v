@@ -1,4 +1,4 @@
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, Locale, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -9,7 +9,7 @@ import { cookies } from "next/headers";
 
 import { exo } from "@/components/ui/fonts";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+import { NavLinks } from "@/components/nav-links";
 
 export const metadata: Metadata = {
   title: "Green Retail",
@@ -22,15 +22,15 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: Locale };
 }) {
+  const { locale } = await params;
   const cookiesStore = await cookies();
   const defaultOpen = cookiesStore.get("sidebar:state")?.value === "true";
-  const { locale } = await params;
 
   //Ensure that the incoming locale is valid
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  if (!routing.locales.includes(locale as any)) {
+  if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
@@ -43,7 +43,7 @@ export default async function RootLayout({
       <body className={`${exo.className} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <SidebarProvider defaultOpen={defaultOpen}>
-            <AppSidebar />
+            <NavLinks />
             <main>
               <SidebarTrigger />
               {children}
