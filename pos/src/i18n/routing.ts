@@ -15,6 +15,34 @@ export const routing = defineRouting({
       en: "/",
       es: "/",
     },
+    "/dashboard/products": {
+      en: "/dashboard/products",
+      es: "/tablero/productos",
+    },
+    "/dashboard/uom": {
+      en: "/dashboard/uom",
+      es: "/tablero/uom",
+    },
+    "/dashboard/product-ledger": {
+      en: "/dashboard/product-ledger",
+      es: "/tablero/product-ledger",
+    },
+    "/dashboard/product-discount": {
+      en: "/dashboard/product-discount",
+      es: "/tablero/product-discount",
+    },
+    "/dashboard/product-group": {
+      en: "/dashboard/product-group",
+      es: "/tablero/product-group",
+    },
+    "/dashboard/family": {
+      en: "/dashboard/family",
+      es: "/tablero/family",
+    },
+    "/dashboard/season": {
+      en: "/dashboard/season",
+      es: "/tablero/season",
+    },
     "/dashboard/salespersons": {
       en: "/dashboard/salespersons",
       es: "/tablero/vendedores",

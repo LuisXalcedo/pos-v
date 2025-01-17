@@ -21,11 +21,30 @@
     "edit": "Edit",
     "delete": "Delete"
   },
-  "NavLinks": {
+  "NavMain": {
     "home": "Home",
+    "products": "Products",
+    "unit_of_measure": "Unit of measure",
+    "product_group": "Product group",
+    "family": "Family",
+    "season": "Season",
+    "product_discount": "Product discount",
+    "product_ledger_entries": "Product ledger entries",
+    "sales": "Sales",
+    "customers": "Customers",
     "salesperson": "Salesperson",
+    "customer_group": "Customer group",
+    "customer_discount": "Customer discount",
+    "customer_ledger_entries": "Customer ledger entries",
     "logout": "Logout",
-    "settings": "Settings"
+    "settings": "Settings",
+    "users": "Users"
+  },
+  "NavAnalytics": {
+    "title": "Analytics",
+    "end_of_day": "End of day",
+    "report_x": "Report X",
+    "report_z": "Report Z"
   },
   "LocaleSwitcher": {
     "label": "Change Language",
