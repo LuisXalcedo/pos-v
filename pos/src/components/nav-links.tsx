@@ -5,9 +5,9 @@ import { NavAnalytics } from "./nav-analytics";
 import {
   Sidebar,
   SidebarContent,
-  SidebarHeader,
-  SidebarFooter,
-  SidebarRail,
+  // SidebarHeader,
+  // SidebarFooter,
+  // SidebarRail,
 } from "@/components/ui/sidebar";
 import {
   Package,

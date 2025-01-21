@@ -59,7 +59,7 @@
     "zip_code": "Zip Code"
   },
   "Salesperson": {
-    "Salesperson-Information": "Salesperson Information",
+    "title": "Salesperson Information",
     "Salesperson-Address": "Salesperson Address"
   },
   "Salesperson-Information": {

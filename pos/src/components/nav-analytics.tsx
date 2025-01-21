@@ -1,22 +1,14 @@
 "use client";
 
-import { Clock, FileBarChart, type LucideIcon } from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 
-import {
-  DropdownMenu,
-  DropdownMenuItem,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuItem,
-  SidebarMenuAction,
   SidebarMenuButton,
-  useSidebar,
+  // useSidebar,
 } from "@/components/ui/sidebar";
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
@@ -31,7 +23,7 @@ export function NavAnalytics({
     icon?: LucideIcon;
   }[];
 }) {
-  const { isMobile } = useSidebar();
+  // const { isMobile } = useSidebar();
   const t = useTranslations("NavAnalytics");
   const pathname = usePathname();
 

@@ -59,7 +59,7 @@
     "zip_code": "Código Postal"
   },
   "Salesperson": {
-    "Salesperson-Information": "Información del Vendedor",
+    "title": "Información del Vendedor",
     "Salesperson-Address": "Dirección del Vendedor"
   },
   "Salesperson-Information": {
