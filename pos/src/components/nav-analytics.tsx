@@ -18,8 +18,9 @@ import {
   SidebarMenuButton,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import clsx from "clsx";
 
 export function NavAnalytics({
   analytics,
@@ -32,6 +33,7 @@ export function NavAnalytics({
 }) {
   const { isMobile } = useSidebar();
   const t = useTranslations("NavAnalytics");
+  const pathname = usePathname();
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
@@ -40,7 +42,16 @@ export function NavAnalytics({
         {analytics.map((item) => (
           <SidebarMenuItem key={item.title}>
             <SidebarMenuButton asChild>
-              <Link href={item.href}>
+              <Link
+                key={item.title}
+                href={item.href}
+                className={clsx(
+                  "flex w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
+                  {
+                    "bg-sky-100 text-blue-600": pathname === item.href,
+                  }
+                )}
+              >
                 <item.icon />
                 <span>{t(item.title)}</span>
               </Link>

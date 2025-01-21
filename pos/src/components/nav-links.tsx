@@ -28,13 +28,12 @@ import {
 import React from "react";
 
 const navItems = {
-  // {
-  //   title: "home",
-  //   icon: Home,
-  //   href: "/",
-  // },
-  // {
   navMain: [
+    // {
+    //   title: "home",
+    //   icon: Home,
+    //   href: "/",
+    // },
     {
       title: "products",
       icon: Package,
@@ -135,7 +134,7 @@ const navItems = {
 
 export function NavLinks({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar {...props}>
       <SidebarContent>
         <NavMain items={navItems.navMain} />
         <NavAnalytics analytics={navItems.analytics} />
