@@ -13,14 +13,23 @@ import {
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
-import { Pathnames } from "@/i18n/routing";
+
+type ValidHref =
+  | "/"
+  | "/dashboard/products"
+  | "/dashboard/uom"
+  | "/dashboard/product-ledger"
+  | "/dashboard/product-discount"
+  | "/dashboard/product-group"
+  | "/dashboard/family"
+  | "/dashboard/season";
 
 export function NavAnalytics({
   analytics,
 }: {
   analytics: {
     title: string;
-    href: Pathnames;
+    href: ValidHref;
     icon?: LucideIcon;
   }[];
 }) {
@@ -37,7 +46,7 @@ export function NavAnalytics({
             <SidebarMenuButton asChild>
               <Link
                 key={item.title}
-                href={item.href as Pathnames}
+                href={item.href}
                 className={clsx(
                   "flex w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
                   {
