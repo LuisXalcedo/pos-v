@@ -11,7 +11,7 @@ import {
   // useSidebar,
 } from "@/components/ui/sidebar";
 import { Link, usePathname } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useTranslations, NamespaceKeys } from "next-intl";
 import clsx from "clsx";
 
 type ValidHref =
@@ -23,6 +23,8 @@ type ValidHref =
   | "/dashboard/product-group"
   | "/dashboard/family"
   | "/dashboard/season";
+
+type NavLinkKeys = NamespaceKeys<typeof NavAnalytics, "NavAnalytics">;
 
 export function NavAnalytics({
   analytics,
@@ -45,7 +47,7 @@ export function NavAnalytics({
           <SidebarMenuItem key={item.title}>
             <SidebarMenuButton asChild>
               <Link
-                key={item.title}
+                key={item.title as NavLinkKeys}
                 href={item.href}
                 className={clsx(
                   "flex w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
@@ -55,7 +57,7 @@ export function NavAnalytics({
                 )}
               >
                 {item.icon && <item.icon />}
-                <span>{t(item.title)}</span>
+                <span>{t(item.title as NavLinkKeys)}</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
