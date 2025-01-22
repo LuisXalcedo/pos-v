@@ -13,13 +13,14 @@ import {
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
+import { Pathnames } from "@/i18n/routing";
 
 export function NavAnalytics({
   analytics,
 }: {
   analytics: {
     title: string;
-    href: string;
+    href: Pathnames;
     icon?: LucideIcon;
   }[];
 }) {
