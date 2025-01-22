@@ -54,7 +54,7 @@ export function NavAnalytics({
                   }
                 )}
               >
-                <item.icon />
+                {item.icon && <item.icon />}
                 <span>{t(item.title)}</span>
               </Link>
             </SidebarMenuButton>
