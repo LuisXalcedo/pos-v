@@ -18,21 +18,24 @@ import {
   SidebarMenuSubButton,
 } from "@/components/ui/sidebar";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useTranslations, NamespaceKeys } from "next-intl";
 import { usePathname } from "@/i18n/routing";
 import clsx from "clsx";
+import { ValidHref } from "@/types/routes";
+
+type NavLinkKeys = NamespaceKeys<typeof NavMain, "NavMain">;
 
 export function NavMain({
   items,
 }: {
   items: {
-    title: string;
+    title: NavLinkKeys;
     // href?: string;
     icon?: LucideIcon;
     isActive?: boolean;
     items?: {
-      title: string;
-      href: string;
+      title: NavLinkKeys;
+      href: ValidHref;
       icon?: LucideIcon;
     }[];
   }[];

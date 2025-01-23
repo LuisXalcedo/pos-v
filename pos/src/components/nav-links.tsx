@@ -26,8 +26,21 @@ import {
 } from "lucide-react";
 
 import React from "react";
+import { LucideIcon } from "lucide-react";
+import { ValidHref } from "@/types/routes";
+import { NamespaceKeys } from "next-intl";
 
-const navItems = {
+type NavLinkKeys = NamespaceKeys<typeof NavAnalytics, "NavAnalytics">;
+
+interface NavItem {
+  title: NavLinkKeys;
+  icon?: LucideIcon;
+  href: ValidHref;
+  isActive?: boolean;
+  items?: NavItem[];
+}
+
+const navItems: { navMain: NavItem[]; analytics: NavItem[] } = {
   navMain: [
     // {
     //   title: "home",
@@ -35,78 +48,78 @@ const navItems = {
     //   href: "/",
     // },
     {
-      title: "products",
+      title: "products" as NavLinkKeys,
       icon: Package,
       href: "/dashboard/products",
       isActive: true,
       items: [
         {
-          title: "products",
+          title: "products" as NavLinkKeys,
           icon: Package,
           href: "/dashboard/products",
           // badge: "1.2.3",
         },
         {
-          title: "unit_of_measure",
+          title: "unit_of_measure" as NavLinkKeys,
           icon: Scale,
           href: "/dashboard/uom",
         },
         {
-          title: "product_group",
+          title: "product_group" as NavLinkKeys,
           icon: FolderTree,
           href: "/dashboard/product-group",
         },
         {
-          title: "family",
+          title: "family" as NavLinkKeys,
           icon: Tags,
           href: "/dashboard/family",
         },
         {
-          title: "season",
+          title: "season" as NavLinkKeys,
           icon: Sun,
           href: "/dashboard/season",
         },
         {
-          title: "product_discount",
+          title: "product_discount" as NavLinkKeys,
           icon: Tag,
           href: "/dashboard/product-discount",
         },
         {
-          title: "product_ledger_entries",
+          title: "product_ledger_entries" as NavLinkKeys,
           icon: FileSpreadsheet,
           href: "/dashboard/product-ledger",
         },
       ],
     },
     {
-      title: "sales",
+      title: "sales" as NavLinkKeys,
       icon: PieChart,
       href: "/dashboard/customers",
       isActive: true,
       items: [
         {
-          title: "customers",
+          title: "customers" as NavLinkKeys,
           icon: Users,
           href: "/dashboard/customers",
           // badge: "3.4.5",
         },
         {
-          title: "salesperson",
+          title: "salesperson" as NavLinkKeys,
           icon: UserCircle,
           href: "/dashboard/salespersons",
         },
         {
-          title: "customer_group",
+          title: "customer_group" as NavLinkKeys,
           icon: UsersRound,
           href: "/dashboard/customer-group",
         },
         {
-          title: "customer_discount",
+          title: "customer_discount" as NavLinkKeys,
           icon: Tag,
           href: "/dashboard/customer-discount",
         },
         {
-          title: "customer_ledger_entries",
+          title: "customer_ledger_entries" as NavLinkKeys,
           icon: FileSpreadsheet,
           href: "/dashboard/customer-ledger",
         },
@@ -115,17 +128,17 @@ const navItems = {
   ],
   analytics: [
     {
-      title: "end_of_day",
+      title: "end_of_day" as NavLinkKeys,
       icon: Clock,
       href: "/dashboard/end-of-day",
     },
     {
-      title: "report_x",
+      title: "report_x" as NavLinkKeys,
       icon: FileBarChart,
       href: "/dashboard/report-x",
     },
     {
-      title: "report_z",
+      title: "report_z" as NavLinkKeys,
       icon: FileBarChart,
       href: "/dashboard/report-z",
     },

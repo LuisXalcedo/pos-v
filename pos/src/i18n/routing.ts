@@ -59,6 +59,34 @@ export const routing = defineRouting({
       en: "/dashboard/salespersons/[id]/delete",
       es: "/tablero/vendedores/[id]/borrar",
     },
+    "/dashboard/customers": {
+      en: "/dashboard/customers",
+      es: "/tablero/clientes",
+    },
+    "/dashboard/customer-ledger": {
+      en: "/dashboard/customer-ledger",
+      es: "/tablero/cliente-ledger",
+    },
+    "/dashboard/customer-discount": {
+      en: "/dashboard/customer-discount",
+      es: "/tablero/cliente-discount",
+    },
+    "/dashboard/customer-group": {
+      en: "/dashboard/customer-group",
+      es: "/tablero/cliente-group",
+    },
+    "/dashboard/end-of-day": {
+      en: "/dashboard/end-of-day",
+      es: "/tablero/end-of-day",
+    },
+    "/dashboard/report-x": {
+      en: "/dashboard/report-x",
+      es: "/tablero/report-x",
+    },
+    "/dashboard/report-z": {
+      en: "/dashboard/report-z",
+      es: "/tablero/report-z",
+    },
     "/login": {
       en: "/login",
       es: "/iniciar-sesion",
