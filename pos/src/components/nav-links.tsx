@@ -17,7 +17,7 @@ import {
   Sun,
   Tag,
   FileSpreadsheet,
-  PieChart,
+  // PieChart,npm
   Users,
   UserCircle,
   UsersRound,
@@ -49,7 +49,7 @@ const navItems: { navMain: NavItem[]; analytics: NavItem[] } = {
     // },
     {
       title: "products" as NavLinkKeys,
-      icon: Package,
+      // icon: Package,
       href: "/dashboard/products",
       isActive: true,
       items: [
@@ -93,7 +93,7 @@ const navItems: { navMain: NavItem[]; analytics: NavItem[] } = {
     },
     {
       title: "sales" as NavLinkKeys,
-      icon: PieChart,
+      // icon: PieChart,
       href: "/dashboard/customers",
       isActive: true,
       items: [
