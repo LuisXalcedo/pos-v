@@ -7,5 +7,5 @@ export type Salesperson = {
   commission: number;
   phone: string;
   email: string;
-  bloqued: boolean;
+  blocked: boolean;
 };

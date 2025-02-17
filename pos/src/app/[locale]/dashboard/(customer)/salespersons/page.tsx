@@ -17,7 +17,7 @@ async function getSalespersons(): Promise<Salesperson[]> {
     commission: sp.commission || 0.0,
     phone: sp.phone || "",
     email: sp.email || "",
-    blocked: sp.bloqued || false,
+    blocked: sp.blocked || false,
   }));
 }
 

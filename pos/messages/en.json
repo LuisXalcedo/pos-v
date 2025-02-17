@@ -68,7 +68,7 @@
     "commission": "Commission",
     "phone": "Phone",
     "email": "Email",
-    "bloqued": "Bloqued",
+    "blocked": "Blocked",
     "createdAt": "Created At",
     "updatedAt": "Updated At"
   },
