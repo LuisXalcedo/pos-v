@@ -1,4 +1,4 @@
-import type { ColumnDef } from "@tanstack/react-table";
+import type { ColumnDef, Column } from "@tanstack/react-table";
 import type { Salesperson } from "@/lib/types";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,16 +19,16 @@ const SALESPERSON_KEYS = [
 type SalespersonKey = (typeof SALESPERSON_KEYS)[number];
 
 function createSortingHeader(text: string) {
-  const SortingHeader = ({ column }: { column: any }) => (
+  const SortingHeader = ({ column }: { column: Column<Salesperson> }) => (
     <Button
       variant="ghost"
       onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
     >
       {text}
+      {column.getIsSorted() === "asc" && <ArrowUp className="ml-2 h-4 w-4" />}
       {column.getIsSorted() === "desc" && (
         <ArrowDown className="ml-2 h-4 w-4" />
       )}
-      {column.getIsSorted() === "asc" && <ArrowUp className="ml-2 h-4 w-4" />}
     </Button>
   );
 
