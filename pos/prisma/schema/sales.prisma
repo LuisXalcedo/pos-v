@@ -1,0 +1,17 @@
+model Salesperson {
+    id          String    @id @default(cuid())
+    name        String?
+    name2       String?
+    id_employee Int?      @unique
+    job_title   String?
+    gender      String?
+    commission  Float?    @default(0.00)
+    address     Address[]
+    phone       String?
+    email       String?   @unique
+    bloqued     Boolean   @default(false)
+    created_at  DateTime  @default(now())
+    updated_at  DateTime  @updatedAt
+
+    @@map("salespersons")
+}

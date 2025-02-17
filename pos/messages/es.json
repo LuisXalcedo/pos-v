@@ -60,18 +60,17 @@
   },
   "Salesperson": {
     "title": "Información del Vendedor",
-    "Salesperson-Address": "Dirección del Vendedor"
-  },
-  "Salesperson-Information": {
-    "first-name": "Nombre",
-    "last-name": "Apellido",
-    "id-employee": "Id Empleado",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "idEmployee": "Id Empleado",
+    "jobTitle": "Título del trabajo",
+    "gender": "Género",
     "commission": "Comisión",
     "phone": "Teléfono",
     "email": "Email",
     "bloqued": "Bloqueado",
-    "created-at": "Creado en",
-    "updated-at": "Actualizado en"
+    "createdAt": "Creado en",
+    "updatedAt": "Actualizado en"
   },
   "Dashboard": {
     "title": "Dashboard",

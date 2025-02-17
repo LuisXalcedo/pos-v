@@ -5,7 +5,8 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder"]
 }
 
 datasource db {
@@ -14,7 +15,7 @@ datasource db {
 }
 
 model Address {
-  id          String       @id @default(cuid())
+  id          String      @id @default(cuid())
   street      String?
   city        String?
   state       String?
@@ -23,7 +24,7 @@ model Address {
   addressType AddressType
   ownerId     String
   ownerType   OwnerType
-  salesperson Salesperson? @relation(fields: [ownerId], references: [id])
+  salesperson Salesperson @relation(fields: [ownerId], references: [id], onDelete: Cascade, onUpdate: Cascade)
 
   @@unique([ownerId, ownerType])
   @@map("addresses")
@@ -39,22 +40,6 @@ enum AddressType {
 enum OwnerType {
   SALESPERSON
   CUSTOMER
-}
-
-model Salesperson {
-  id          String    @id @default(cuid())
-  name        String?
-  name2       String?
-  id_employee Int?      @unique
-  commission  Float?    @default(0.00)
-  address     Address[]
-  phone       String?
-  email       String?   @unique
-  bloqued     Boolean   @default(false)
-  created_at  DateTime  @default(now())
-  updated_at  DateTime  @updatedAt
-
-  @@map("salespersons")
 }
 
 model User {
