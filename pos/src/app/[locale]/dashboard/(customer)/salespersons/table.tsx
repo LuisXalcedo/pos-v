@@ -1,7 +1,7 @@
 "use client";
 
 import { DataTable } from "@/components/data-table";
-import type { Salesperson } from "@/lib/types";
+import type { Salesperson } from "@/lib/definitions";
 import { createColumns } from "./columns";
 import { useTranslations } from "next-intl";
 

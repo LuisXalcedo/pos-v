@@ -1,8 +1,8 @@
-import { Salesperson } from "@/lib/types";
-// import { columns } from "./columns";
-// import { DataTable } from "@/components/data-table";
+import { Salesperson } from "@/lib/definitions";
 import prisma from "@/lib/prisma";
 import { Table } from "./table";
+import { Suspense } from "react";
+import { SkeletonDataTable } from "@/components/skeleton";
 
 async function getSalespersons(): Promise<Salesperson[]> {
   const salespersons = await prisma.salesperson.findMany();
@@ -21,12 +21,14 @@ async function getSalespersons(): Promise<Salesperson[]> {
   }));
 }
 
-export default async function SalespersonsPage() {
+export default async function Page() {
   const salespersons = await getSalespersons();
 
   return (
     <div className="container mx-auto py-10">
-      <Table data={salespersons} />
+      <Suspense fallback={<SkeletonDataTable />}>
+        <Table data={salespersons} />
+      </Suspense>
     </div>
   );
 }

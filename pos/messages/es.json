@@ -1,6 +1,6 @@
 {
   "Home": {
-    "title": "Inicio",
+    "title": "Punto de Venta",
     "description": "Bienvenido a Green Retail"
   },
   "NotFound": {
@@ -22,7 +22,7 @@
     "delete": "Eliminar"
   },
   "NavMain": {
-    "home": "Principal",
+    "home": "Punto de Venta",
     "products": "Productos",
     "unit_of_measure": "Unidad de medida",
     "product_group": "Grupo de productos",

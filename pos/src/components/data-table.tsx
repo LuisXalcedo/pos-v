@@ -121,30 +121,6 @@ export function DataTable<TData, TValue>({
                             header.getContext()
                           )}
                     </TableHead>
-                    // <TableHead key={header.id}>
-                    //   {header.isPlaceholder ? null : (
-                    //     <Button
-                    //       variant="ghost"
-                    //       onClick={() =>
-                    //         header.column.toggleSorting(
-                    //           header.column.getIsSorted() === "asc"
-                    //         )
-                    //       }
-                    //     >
-                    //       {typeof header.column.columnDef.header === "function"
-                    //         ? header.column.columnDef.header(
-                    //             header.getContext()
-                    //           )
-                    //         : header.column.columnDef.header}
-                    //       {header.column.getIsSorted() &&
-                    //         (header.column.getIsSorted() === "desc" ? (
-                    //           <ArrowDown className="ml-2 h-4 w-4" />
-                    //         ) : (
-                    //           <ArrowUp className="ml-2 h-4 w-4" />
-                    //         ))}
-                    //     </Button>
-                    //   )}
-                    // </TableHead>
                   );
                 })}
               </TableRow>

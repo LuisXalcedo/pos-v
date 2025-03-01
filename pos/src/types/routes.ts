@@ -17,7 +17,7 @@ export type ValidHref =
   | "/dashboard/family"
   | "/dashboard/season"
   | "/dashboard/salespersons"
-  // | "/dashboard/salespersons/create"
+  | "/dashboard/salespersons/create"
   // | "/dashboard/salespersons/[id]/edit"
   // | "/dashboard/salespersons/[id]/delete"
   | "/dashboard/customers"

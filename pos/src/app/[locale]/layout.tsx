@@ -11,6 +11,8 @@ import { exo } from "@/components/ui/fonts";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { NavLinks } from "@/components/nav-links";
 
+// export const experimental_ppr = true;
+
 export const metadata: Metadata = {
   title: "Green Retail",
   description: "Point of Sale by Green Retail",

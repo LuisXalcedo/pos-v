@@ -1,5 +1,5 @@
 import type { ColumnDef, Column } from "@tanstack/react-table";
-import type { Salesperson } from "@/lib/types";
+import type { Salesperson } from "@/lib/definitions";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";

@@ -1,6 +1,6 @@
 {
   "Home": {
-    "title": "Home",
+    "title": "Point of Sale",
     "description": "Welcome to Green Retail"
   },
   "NotFound": {
@@ -22,7 +22,7 @@
     "delete": "Delete"
   },
   "NavMain": {
-    "home": "Home",
+    "home": "Point of Sale",
     "products": "Products",
     "unit_of_measure": "Unit of measure",
     "product_group": "Product group",
@@ -70,7 +70,8 @@
     "email": "Email",
     "blocked": "Blocked",
     "createdAt": "Created At",
-    "updatedAt": "Updated At"
+    "updatedAt": "Updated At",
+    "save": "Save"
   },
   "Dashboard": {
     "title": "Dashboard",
