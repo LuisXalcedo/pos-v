@@ -51,9 +51,13 @@
     "locale": "{locale, select, en {🇺🇸 English} es {🇪🇸 Spanish} other {Unknown}}"
   },
   "Address": {
-    "address": "Address",
+    "title": "Address Information",
+    "street": "Street",
     "address2": "Address 2",
     "country": "Country",
+    "selectCountry": "Select a Country",
+    "selectState": "Select a State",
+    "selectCity": "Select a City",
     "city": "City",
     "state": "State",
     "zip_code": "Zip Code"

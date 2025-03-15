@@ -19,3 +19,13 @@ export const salespersonSchema = z.object({
   email: z.string().email("Invalid email address").optional(),
   blocked: z.boolean().optional(),
 });
+
+export const addressSchema = z.object({
+  street: z.string().optional(),
+  city: z.string().optional(),
+  state: z.string().optional(),
+  postal_code: z.string().optional(),
+  country: z.string().optional(),
+});
+
+export type TAddressSchema = z.infer<typeof addressSchema>;
