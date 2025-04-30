@@ -27,7 +27,7 @@ export async function getCountries(): Promise<Country[]> {
 }
 
 export async function getStates(countryCode: string): Promise<State[]> {
-  console.log("countryCode", countryCode);
+  // console.log("countryCode", countryCode);
   if (!countryCode) return [];
 
   try {

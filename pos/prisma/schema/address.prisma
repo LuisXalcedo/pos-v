@@ -1,0 +1,27 @@
+model Address {
+    id          String      @id @default(cuid())
+    street      String?
+    city        String?
+    state       String?
+    postalCode  String?
+    country     String?
+    addressType AddressType
+    ownerId     String
+    ownerType   OwnerType
+    salesperson Salesperson @relation(fields: [ownerId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+    @@unique([ownerId, ownerType])
+    @@map("addresses")
+}
+
+enum AddressType {
+    WORK
+    HOME
+    BILLING
+    SHIPPING
+}
+
+enum OwnerType {
+    SALESPERSON
+    CUSTOMER
+}
