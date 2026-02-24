@@ -22,7 +22,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "/Users/luisxalcedo/Green-Retail/pos-v/pos/src/generated/prisma",
+      "value": "/vercel/sandbox/primary/pos/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -32,12 +32,12 @@ const config: runtime.GetPrismaClientConfig = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "darwin",
+        "value": "rhel-openssl-3.0.x",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/luisxalcedo/Green-Retail/pos-v/pos/prisma/schema/schema.prisma",
+    "sourceFilePath": "/vercel/sandbox/primary/pos/prisma/schema/schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../../prisma/schema",
